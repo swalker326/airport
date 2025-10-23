@@ -12,7 +12,63 @@ importers:
         specifier: 2.2.3
         version: 2.2.3
 
-  apps/host:
+  apps/dashboard:
+    dependencies:
+      react:
+        specifier: ^19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.2.0(react@19.2.0)
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 2.2.3
+        version: 2.2.3
+      '@rsbuild/core':
+        specifier: ^1.5.14
+        version: 1.5.17
+      '@rsbuild/plugin-react':
+        specifier: ^1.4.1
+        version: 1.4.1(@rsbuild/core@1.5.17)
+      '@types/react':
+        specifier: ^19.2.2
+        version: 19.2.2
+      '@types/react-dom':
+        specifier: ^19.2.1
+        version: 19.2.2(@types/react@19.2.2)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  apps/flight-board:
+    dependencies:
+      react:
+        specifier: ^19.2.0
+        version: 19.2.0
+      react-dom:
+        specifier: ^19.2.0
+        version: 19.2.0(react@19.2.0)
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 2.2.3
+        version: 2.2.3
+      '@rsbuild/core':
+        specifier: ^1.5.14
+        version: 1.5.17
+      '@rsbuild/plugin-react':
+        specifier: ^1.4.1
+        version: 1.4.1(@rsbuild/core@1.5.17)
+      '@types/react':
+        specifier: ^19.2.2
+        version: 19.2.2
+      '@types/react-dom':
+        specifier: ^19.2.1
+        version: 19.2.2(@types/react@19.2.2)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
+
+  apps/passenger-services:
     dependencies:
       react:
         specifier: ^19.2.0
