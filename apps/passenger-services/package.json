@@ -1,28 +1,27 @@
 {
   "name": "passenger-services",
-  "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "rspack build",
     "check": "biome check --write",
-    "dev": "rsbuild dev",
+    "dev": "rspack dev",
     "format": "biome format --write",
-    "preview": "rsbuild preview"
+    "preview": "rspack preview"
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.21.1",
-    "@module-federation/rsbuild-plugin": "^0.21.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "zephyr-rsbuild-plugin": "0.1.1-next.1"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zephyr-rspack-plugin": "0.1.1-next.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.3",
-    "@rsbuild/core": "^1.5.14",
-    "@rsbuild/plugin-react": "^1.4.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.1",
-    "typescript": "^5.9.3"
+    "@rspack/cli": "^1.5.8",
+    "@rspack/core": "^1.5.8",
+    "@rspack/plugin-react-refresh": "^1.5.1",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "react-refresh": "^0.17.0",
+    "typescript": "^5.9.2"
   }
 }

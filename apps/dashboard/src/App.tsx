@@ -1,17 +1,26 @@
-// //@ts-expect-error
-// import FlightBoardApp from "flight_board/FlightBoardApp";
-//@ts-expect-error
-import PassengerServiceApp from "passenger_services/PassengerServicesApp";
+import React, { useState } from "react";
+import reactLogo from "./assets/react.svg";
 
-const App = () => {
+//@ts-expect-error - fuck you
+const FlightBoardApp = React.lazy(() => import("flight_board/FlightBoardApp"));
+const PassengerServicesApp = React.lazy(
+  //@ts-expect-error - fuck you
+  () => import("passenger_services/PassengerServicesApp")
+);
+
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="content">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
-      {/* <FlightBoardApp /> */}
-      <PassengerServiceApp />
+    <div className="App">
+      <React.Suspense fallback={<div>Loading Flight Board...</div>}>
+        <FlightBoardApp />
+      </React.Suspense>
+      <React.Suspense fallback={<div>Loading Passenger Services...</div>}>
+        <PassengerServicesApp />
+      </React.Suspense>
     </div>
   );
-};
+}
 
 export default App;
